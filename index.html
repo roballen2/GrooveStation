@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Groove Station — Tune in to the groove.</title>
+<meta name="description" content="The Groove Station is a London, Ontario blues, rock and soul band available for weddings, private events, and live shows. Contact us to book.">
+<link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="wordmark" href="/">The Groove <span class="accent">Station</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" onclick="document.getElementById('main-nav').classList.toggle('is-open'); this.setAttribute('aria-expanded', this.getAttribute('aria-expanded')==='true'?'false':'true');">Menu ☰</button>
+    <nav class="main-nav" id="main-nav">
+      <a href="/" class="is-active">Home</a>
+      <a href="/band/" class="">Band</a>
+      <a href="/media/" class="">Media</a>
+      <a href="/events/" class="">Events</a>
+      <a href="/contact/" class="">Contact</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+
+<section class="hero">
+  <div class="hero__bg">
+    <video autoplay muted loop playsinline poster="/images/gs-live-18.jpg">
+      <source src="/video/gs-web-large.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero__content">
+    <span class="eyebrow">London, Ontario &middot; Blues / Rock / Soul</span>
+    <h1>The Groove Station</h1>
+    <p class="lede">Tune in to the groove. Live blues, rock and soul for weddings, private events, and stages across southwestern Ontario.</p>
+    <div class="hero__cta hero__cta--primary">
+      <a class="btn btn--primary" href="mailto:info@thegroovestation.com?subject=Booking%20Inquiry">Book Us</a>
+      <a class="btn btn--facebook" href="https://www.facebook.com/profile.php?id=100064150980766">Find Us on Facebook</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section__header">
+    <h2>Upcoming Shows</h2>
+    <a class="see-all" href="/events/">All dates &rarr;</a>
+  </div>
+  <p class="dates-empty">Check our Facebook page for upcoming show dates.</p>
+</section>
+
+<section class="section">
+  <div class="quick-links">
+    <a href="/band/">The Band</a>
+    <a href="/media/">Photos &amp; Videos</a>
+    <a href="/contact/">Contact</a>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="footer__grid">
+    <div class="footer__brand">
+      <img src="/images/gs-logo-large.jpg" alt="The Groove Station" class="footer__logo">
+      <p>Tune in to the groove.</p>
+      <p><a href="https://www.facebook.com/profile.php?id=100064150980766">Facebook</a> &nbsp;·&nbsp; <a href="https://www.instagram.com/the_groovestation_ldn/">Instagram</a> &nbsp;·&nbsp; <a href="https://x.com/groovestationca">Twitter / X</a></p>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>&copy; 2026 The Groove Station</span>
+    <span><a href="mailto:info@thegroovestation.com">info@thegroovestation.com</a></span>
+  </div>
+</footer>
+<div id="lightbox-overlay" class="lightbox-overlay" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">&times;</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+<script>
+document.addEventListener('click', function(e) {
+  var trigger = e.target.closest('[data-lightbox]');
+  if (trigger) {
+    e.preventDefault();
+    var img = trigger.querySelector('img');
+    document.getElementById('lightbox-img').src = trigger.getAttribute('href') || img.src;
+    document.getElementById('lightbox-overlay').classList.add('is-open');
+  }
+});
+function closeLightbox() {
+  document.getElementById('lightbox-overlay').classList.remove('is-open');
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeLightbox();
+});
+</script>
+</body>
+</html>

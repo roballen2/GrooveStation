@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Band — The Groove Station</title>
+<meta name="description" content="Meet The Groove Station.">
+<link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="wordmark" href="/">The Groove <span class="accent">Station</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" onclick="document.getElementById('main-nav').classList.toggle('is-open'); this.setAttribute('aria-expanded', this.getAttribute('aria-expanded')==='true'?'false':'true');">Menu ☰</button>
+    <nav class="main-nav" id="main-nav">
+      <a href="/" class="">Home</a>
+      <a href="/band/" class="is-active">Band</a>
+      <a href="/media/" class="">Media</a>
+      <a href="/events/" class="">Events</a>
+      <a href="/contact/" class="">Contact</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+
+<div class="page-header">
+  <div class="page-header__inner">
+    <h1>The Band</h1>
+  </div>
+</div>
+<article class="prose">
+  <a href="/images/gs-wort.jpg" data-lightbox><img src="/images/gs-wort.jpg" alt="" style="margin-bottom:32px;cursor:zoom-in;"></a><p><strong>The Groove Station brings a unique blend of blues, rock and soul that will knock your socks off! Led by powerful vocals, the band provides a meaty groove that will keep your feet moving.</strong></p>
+<p><strong>Rebecca Janelle</strong> — Singer / Guitar — Rebecca grew up in a farm town outside of London, Ontario. Her parents bought her first guitar at age 14 and she was hooked. By the age of 20, she won first place at the BX 93 Country Roads contest, and soon after began touring with her own band "Rebecca and Kickin' Horse," producing her first album. She joined forces with her partner Rodney, a singer and guitar player with "The Prairie Dawgs," and together they amalgamated their bands and travelled throughout Canada performing Country and Rock. Rebecca has always had country roots, and her musical pursuit broadened to rock-and-blues by artists such as Susan Tedeschi and Bonnie Raitt. She's spent over 23+ years entertaining crowds with her love of music, pouring her heart and soul into every note.</p>
+<p><strong>Rodney Alexander</strong> — Guitar, Vocals — A multi-talented multi-instrumentalist and singer, Rodney cut his teeth fronting "The Prairie Dawgs" before joining forces with Rebecca, amalgamating their bands and touring Canada together. His playing and vocals move easily across blues, country, and rock, anchoring The Groove Station's sound with a steady, road-tested presence on every stage.</p>
+<p><strong>Ryan Van Acker</strong> — Drummer — Ryan started playing drums at an early age, taking lessons with London drum instructor Brian McHugh. He played in his first working band at 16, and has gone on to play with various blues, rock, and country artists including Jonathan Russell, The Joys, Elton Lammie, and Genevieve Fisher.</p>
+<p><strong>Rob Allen</strong> — Bass — Rob has been playing bass for over 30 years, performing coast to coast across Canada in rock, country, and blues settings. He's toured with Canadian recording artists along the way, and brings that road experience to every show — holding down the groove all night long.</p>
+<p><strong>Guy Miskelly</strong> — Guitar — Guy started playing guitar at an early age and it wasn't long before he was performing for audiences. During high school he played in several bands at talent shows and community events, then went on to study jazz at Mohawk College in Hamilton, Ontario with some of Canada's finest musicians. He performs with many different musical groups across Country, Rock, Blues, and Jazz, and has shared the stage with Genevieve Fisher, Sarah Smith, Laura Rose, Doug Varty, Tara Oram, Karen Grainger, and Jonathan Russell, as well as touring North America with several tribute shows.</p>
+</article>
+
+</main>
+<footer class="site-footer">
+  <div class="footer__grid">
+    <div class="footer__brand">
+      <img src="/images/gs-logo-large.jpg" alt="The Groove Station" class="footer__logo">
+      <p>Tune in to the groove.</p>
+      <p><a href="https://www.facebook.com/profile.php?id=100064150980766">Facebook</a> &nbsp;·&nbsp; <a href="https://www.instagram.com/the_groovestation_ldn/">Instagram</a> &nbsp;·&nbsp; <a href="https://x.com/groovestationca">Twitter / X</a></p>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>&copy; 2026 The Groove Station</span>
+    <span><a href="mailto:info@thegroovestation.com">info@thegroovestation.com</a></span>
+  </div>
+</footer>
+<div id="lightbox-overlay" class="lightbox-overlay" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">&times;</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+<script>
+document.addEventListener('click', function(e) {
+  var trigger = e.target.closest('[data-lightbox]');
+  if (trigger) {
+    e.preventDefault();
+    var img = trigger.querySelector('img');
+    document.getElementById('lightbox-img').src = trigger.getAttribute('href') || img.src;
+    document.getElementById('lightbox-overlay').classList.add('is-open');
+  }
+});
+function closeLightbox() {
+  document.getElementById('lightbox-overlay').classList.remove('is-open');
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeLightbox();
+});
+</script>
+</body>
+</html>
