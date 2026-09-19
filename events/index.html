@@ -31,6 +31,22 @@
     <h1>Events</h1>
   </div>
 </div>
+<section class="section">
+  <div class="section__header section__header--narrow">
+    <h2>Upcoming Shows</h2>
+  </div>
+  <div class="dates-teaser" id="upcoming-shows">
+    <p class="dates-empty">Check our Facebook page for upcoming show dates.</p>
+  </div>
+</section>
+
+<section class="section" id="past-shows-section" hidden>
+  <div class="section__header section__header--narrow section__header--sub">
+    <h2>Past Shows</h2>
+  </div>
+  <div class="dates-teaser" id="past-shows"></div>
+</section>
+
 <article class="prose">
   <h4><strong>The Groove Station's upcoming events</strong></h4>
 <p>Please see our <a href="https://www.facebook.com/profile.php?id=100064150980766&amp;">Facebook Page</a> for upcoming events.</p>
@@ -45,7 +61,7 @@
     <div class="footer__brand">
       <img src="/images/gs-logo-large.jpg" alt="The Groove Station" class="footer__logo">
       <p>Tune in to the groove.</p>
-      <p><a href="https://www.facebook.com/profile.php?id=100064150980766">Facebook</a> &nbsp;·&nbsp; <a href="https://www.instagram.com/the_groovestation_ldn/">Instagram</a> &nbsp;·&nbsp; <a href="https://x.com/groovestationca">Twitter / X</a></p>
+      <div class="social-links"><a class="social-link social-link--facebook" href="https://www.facebook.com/profile.php?id=100064150980766" aria-label="Facebook"></a><a class="social-link social-link--instagram" href="https://www.instagram.com/the_groovestation_ldn/" aria-label="Instagram"></a><a class="social-link social-link--x" href="https://x.com/groovestationca" aria-label="X (Twitter)"></a></div>
     </div>
   </div>
   <div class="footer__bottom">
@@ -57,6 +73,7 @@
   <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">&times;</button>
   <img id="lightbox-img" src="" alt="">
 </div>
+<script src="/js/shows.js" defer></script>
 <script>
 document.addEventListener('click', function(e) {
   var trigger = e.target.closest('[data-lightbox]');
