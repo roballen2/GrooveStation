@@ -128,7 +128,7 @@ p { margin: 0 0 1.1em; color: var(--paper); }
    ============================================================ */
 
 .site-header {
-  background: var(--stage-deep);
+  background: var(--stage-deep) url('/images/groove-station-header-bg-compact-2400.png') center center / cover no-repeat;
   border-bottom: 1px solid var(--hairline);
   position: sticky;
   top: 0;
